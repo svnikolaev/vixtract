@@ -21,7 +21,7 @@ DROP DATABASE demo;
 -- Name: demo; Type: DATABASE; Schema: -; Owner: postgres
 --
 
-CREATE DATABASE demo WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_US.UTF-8' LC_CTYPE = 'en_US.UTF-8';
+CREATE DATABASE demo WITH TEMPLATE = template0 ENCODING = 'UTF8';
 
 
 ALTER DATABASE demo OWNER TO postgres;
