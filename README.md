@@ -8,9 +8,9 @@ ViXtract – это сборка на основе популярных откр
 
 ## Установка
 
-Для установки ViXtract используйте команду ниже (рекомендуется использовать Ubuntu 18.04 LTS):
+Для установки ViXtract используйте команду ниже (скрипт установки оптимизирован для Debian 11):
 
-> sudo apt-get update && sudo apt-get install git -y && git clone https://github.com/visiologyofficial/vixtract && cd vixtract && sudo chmod +x *.sh && sudo ./install.sh
+> sudo apt update && sudo apt install git -y && git clone https://github.com/svnikolaev/vixtract.git && cd vixtract && sudo chmod +x *.sh && sudo ./install.sh
 
 Если планируется использовать ViXtract с публичным доменом и HTTPS, рекомендуется до установки ViXtract настроить домен на DNS-сервере. В этом случае при установке ViXtract можно будет сразу настроить получение SSL сертификата через Letsencypt. 
 
@@ -18,8 +18,8 @@ ViXtract – это сборка на основе популярных откр
 1. Домен/hostname. Можно оставить пустым для доступа к серверу по IP, но в этом случае автоматическая настройка HTTPS будет недоступна.
 2. Согласие на автоматическую настройку HTTPS
 3. Имя пользователя и пароль для первой учетной записи. С помощью этой учетной записи можно будет сразу приступить к работе с ViXtract.
-3. Пароль для учетной записи администратора Cronicle ('admin')
-4. Пароль для учетной записи 'etl' в предустановленной PostgreSQL
+4. Пароль для учетной записи администратора Cronicle ('admin')
+5. Пароль для учетной записи 'etl' в предустановленной PostgreSQL
 
 После установки ViXtract будет доступен в браузере по адресу http(s)://\<домен или IP\>
 
