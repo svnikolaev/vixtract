@@ -7,7 +7,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-apt update && apt install -y wget curl software-properties-common python3.6 python3-pip bzip2 ca-certificates git libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+apt update && apt install -y wget curl software-properties-common python3.9 python3-pip bzip2 ca-certificates git libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 
 ### Conda
 wget -nc https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh -O ~/anaconda.sh
@@ -41,11 +41,11 @@ systemctl start jupyterhub.service
 pip3 install papermill
 
 ### Conda ENV Dev
-/opt/conda/bin/conda create -y --prefix=/opt/conda/envs/dev python=3.6 petl ipykernel wheel requests pandas sqlalchemy psycopg2 openpyxl
+/opt/conda/bin/conda create -y --prefix=/opt/conda/envs/dev python=3.9 petl ipykernel wheel requests pandas sqlalchemy psycopg2 openpyxl
 ${CONDA_DIR}/envs/dev/bin/python -m ipykernel install --prefix=/usr/local --name 'dev' --display-name "Python (Dev Env)"
 
 ### Conda ENV Prod
-/opt/conda/bin/conda create -y --prefix=/opt/conda/envs/prod python=3.6 petl ipykernel wheel requests pandas sqlalchemy psycopg2 openpyxl
+/opt/conda/bin/conda create -y --prefix=/opt/conda/envs/prod python=3.9 petl ipykernel wheel requests pandas sqlalchemy psycopg2 openpyxl
 ${CONDA_DIR}/envs/prod/bin/python -m ipykernel install --prefix=/usr/local --name 'prod' --display-name "Python (Prod Env)"
 
 ### Cronicle
