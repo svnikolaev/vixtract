@@ -77,8 +77,8 @@ chmod 600 /etc/passwd-s3fs
 
 ### PostgreSQL
 apt install -y postgresql postgresql-contrib
-cp postgresql/postgresql.conf /etc/postgresql/10/main/
-cp postgresql/pg_hba.conf /etc/postgresql/10/main/
+cp postgresql/postgresql.conf /etc/postgresql/13/main/
+cp postgresql/pg_hba.conf /etc/postgresql/13/main/
 service postgresql restart
 sudo -u postgres bash -c "psql -c \"CREATE USER ${PSQL_USER} WITH PASSWORD '${POSTGRES_PASSWORD}';\""
 sudo -u postgres bash -c "psql -c \"CREATE DATABASE ${PSQL_DB};\""
@@ -92,6 +92,7 @@ rm /var/etl/DEMO.SQL
 sudo -u postgres bash -c "psql -c \"GRANT ALL PRIVILEGES ON DATABASE demo TO demo;\""
 sudo -u postgres bash -c "psql -d demo -c \"GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO demo;\""
 
+### Configuring
 echo "Configuring hostname/domain..."
 bash ./conf.sh -h
 
