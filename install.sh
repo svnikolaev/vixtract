@@ -25,8 +25,8 @@ chgrp -R etl /var/etl
 chgrp -R etl /media/etl
 
 ### NodeJS
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-apt update && apt install -y nodejs
+
+apt update && apt install -y nodejs npm
 
 ### JupyterHub && JupyterLab
 /opt/conda/bin/conda create -y --prefix=/opt/jupyterhub/ wheel jupyterhub jupyterlab ipywidgets sqlalchemy psycopg2
